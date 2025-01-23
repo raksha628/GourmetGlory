@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gourmet Glory - Artisan Sauces</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    img{
+        height: 200px;width: 200px;
+    }
+</style>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="carousel">
+      <div class="carousel-item active" id="item-1">
+        <img src="C:\Users\vikas\Downloads\Zesty.jpg" alt="Sauce 1">
+        <p class="caption">Zesty Tomato Sauce - Add flavor to your meals!</p>
+      </div>
+      <div class="carousel-item" id="item-2">
+        <img src="C:\Users\vikas\Downloads\bbq.webp" alt="Sauce 2">
+        <p class="caption">Smoky BBQ Sauce - Perfect for grilling!</p>
+      </div>
+      <div class="carousel-item" id="item-3">
+        <img src="C:\Users\vikas\Downloads\Garlic.webp" alt="Sauce 3">
+        <p class="caption">Herb Garlic Sauce - A fresh twist!</p>
+      </div>
+      <button class="nav prev" onclick="prevSlide()">Previous</button>
+      <button class="nav next" onclick="nextSlide()">Next</button>
+    </div>
+  </section>
+
+    <!-- Recipe Suggestion Section -->
+    <section class="recipes">
+        <h2>Recipe Suggestions</h2>
+        <div class="recipe">
+          <img src="C:\Users\vikas\Downloads\Spaghetti_1-1024x1024.webp" alt="Recipe 1">
+          <h3>Spaghetti Bolognese</h3>
+          <p>Made with our Zesty Tomato Sauce.</p>
+        </div>
+        <div class="recipe">
+          <img src="C:\Users\vikas\Downloads\BBQ-Ribs.jpg" alt="Recipe 2">
+          <h3>BBQ Ribs</h3>
+          <p>Featuring our Smoky BBQ Sauce.</p>
+        </div>
+        <div class="recipe">
+          <img src="C:\Users\vikas\Downloads\bread.jpg" alt="Recipe 3">
+          <h3>Garlic Bread</h3>
+          <p>Enhanced with Herb Garlic Sauce.</p>
+        </div>
+      </section>
+    
+      <!-- Contact Form -->
+      <section class="contact">
+        <h2>Contact Us</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>
