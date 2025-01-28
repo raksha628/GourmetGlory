@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gourmet Glory - Artisan Sauces</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styling - Customize as needed */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Hero section */
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .hero img {
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+        /* Recipe section */
+        .recipe {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        .recipe-item {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+        }
+        .recipe-item img {
+            width: 100%;
+            height: auto;
+        }
+        /* Contact form */
+        .contact-form {
+            margin-top: 40px;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>|Gourmet Glory|
+            <br>
+             Artisan Sauces</h1>
+
+        <div class="hero">
+            <img id="hero-image" src="zeistychipotlesauce.jpeg" alt="Zeisty chipotle sauce">
+            <p id="hero-caption">Sauce 1 - Chipotle passion, Zeisty style!!</p>
+            <button onclick="prevImage()">Previous</button>
+            <button onclick="nextImage()">Next</button>
+        </div>
+
+        <h2>Recipe Suggestions</h2>
+
+        <div class="recipe">
+            <div class="recipe-item">
+                <img src="chiptolegrilledcheesesandwich.jpeg" alt="Chipotle grilled cheese sandwich">
+                <h3>Chipotle grilled cheese sandwich</h3>
+                <p>Chipotle Grilled Cheese: spicy, smoky, cheesy bliss!Smoked chipotle peppers add a spicy kick to the creamy melted cheese, perfectly balanced by the crispy crunch of our grilled bread."
+                </p>
+            </div>
+            <div class="recipe-item">
+                <img src="fettuchinealfredo.jpeg" alt="Fettuccine Alfredo">
+                <h3>Fettuccine Alfredo</h3>
+                <p>Get ready to twirl your fork around a plate of creamy, cheesy, utterly irresistible authentic italian cuisine/p>
+            </div>
+            <div class="recipe-item">
+                <img src="chickenbreast.jpeg" alt="Grilled chicken breast">
+                <h3>Grilled chicken breast</h3>
+                <p>Juicy grilled chicken breast, marinated in a blend of herbs and spices, perfect for a quick and delicious dinner."
+                </p>
+            </div>
+        </div>
+
+        <h2>Contact Us</h2>
+
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <textarea placeholder="Message" required></textarea><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        const images = [
+            { src: 'zeistychipotlesauce.jpeg', caption: 'Zeisty chipotle - Chipotle passion, Zeisty style!!' },
+            { src: 'alfredosauce.jpeg', caption: 'Sauce 2 - Get your Alfredo ON!' },
+            { src: 'carolenabbqsauca.jpeg', caption: 'Sauce 3 - Taste the tar heel tradition!' }
+        ];
+        let currentImageIndex = 0;
+
+        const heroImage = document.getElementById('hero-image');
+        const heroCaption = document.getElementById('hero-caption');
+
+        function updateImage() {
+            heroImage.src = images[currentImageIndex].src;
+            heroCaption.textContent = images[currentImageIndex].caption;
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateImage();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateImage();
+        }
+
+        // Initial image display
+        updateImage();
+    </script>
+
+</body>
+</html>
+
